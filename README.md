@@ -1,15 +1,15 @@
 
-# DecodeLabs Rule-Based AI Chatbot
+# DecodeLabs Rule-Based AI Chatbot 🤖
 
 A beginner-friendly rule-based AI Learning Companion developed as part of the DecodeLabs Industrial Training Program.
 
-## Project Overview
+## 📌 Project Overview
 
-This project is a console-based chatbot built using Python. It uses rule-based logic, intent recognition, topic memory, and an interactive quiz to provide an engaging learning experience.
+This project is a console-based chatbot developed using Python. It uses rule-based logic, intent recognition, topic memory, and an interactive quiz to provide an engaging learning experience.
 
 The chatbot responds to user questions about Artificial Intelligence, Machine Learning, and Python.
 
-## Features
+## ✨ Features
 
 - Greeting and exit commands
 - Rule-based intent recognition
@@ -22,8 +22,9 @@ The chatbot responds to user questions about Artificial Intelligence, Machine Le
 - Automatic score tracking
 - Quiz feedback based on performance
 - Fallback responses for unknown questions
+- Automated tests for core functions
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Conditional Statements
@@ -31,9 +32,21 @@ The chatbot responds to user questions about Artificial Intelligence, Machine Le
 - Loops
 - Lists and Dictionaries
 - String Processing
-- Git and GitHub
+- Git
+- GitHub
 
-## How to Run
+## 📂 Project Structure
+
+```text
+decodelabs-rule-based-chatbot/
+│
+├── chatbot.py
+├── test_chatbot.py
+├── README.md
+└── .gitignore
+```
+
+## 🚀 How to Run
 
 ### 1. Clone the Repository
 
@@ -53,7 +66,26 @@ cd decodelabs-rule-based-chatbot
 python chatbot.py
 ```
 
-## Available Commands
+## 🧪 Running Tests
+
+To test the chatbot's core functions, run:
+
+```bash
+python test_chatbot.py
+```
+
+The test file checks:
+
+- Input normalization
+- Greeting intent recognition
+- AI intent recognition
+- Machine Learning intent recognition
+- Python intent recognition
+- Quiz intent recognition
+- Exit intent recognition
+- Unknown intent recognition
+
+## 💬 Available Commands
 
 | Command | Description |
 |---|---|
@@ -67,7 +99,21 @@ python chatbot.py
 | quiz | Start the knowledge quiz |
 | bye | Exit the chatbot |
 
-## Learning Outcomes
+## 🧠 Example Interaction
+
+```text
+You: hello
+Bot: Hello! I am your AI Learning Companion. How can I help you today?
+
+You: explain ai
+Bot: Artificial Intelligence is the field of creating systems
+that can perform tasks requiring human-like intelligence.
+
+You: quiz
+Bot: Let's test your AI knowledge!
+```
+
+## 📚 Learning Outcomes
 
 Through this project, I practiced:
 
@@ -78,19 +124,24 @@ Through this project, I practiced:
 - User input handling
 - Session-based topic memory
 - Interactive quiz development
-- Git version control and GitHub collaboration
+- Score tracking and feedback
+- Automated testing
+- Git version control
+- GitHub project management
 
-## Future Improvements
+## 🔮 Future Improvements
 
 - Add more learning topics
 - Implement a larger question bank
-- Add difficulty levels to the quiz
+- Add quiz difficulty levels
 - Improve natural-language understanding
 - Add persistent user progress
 - Introduce a graphical user interface
+- Expand chatbot responses
+- Add more automated tests
 
-## Author
+## 👩‍💻 Author
 
-Ramisa Pirzada
+**Ramisa Pirzada**
 
 BS Artificial Intelligence Student

@@ -143,37 +143,120 @@ def get_response(intent, current_topic):
         )
 
 
-def run_quiz():
+def get_quiz_questions(current_topic):
+
+    if current_topic == "Python":
+
+        return [
+            {
+                "question": "Which keyword is used to define a function in Python?",
+                "answers": ["def"],
+                "correct": "def"
+            },
+            {
+                "question": "Which data type stores an ordered collection of items?",
+                "answers": ["list"],
+                "correct": "List"
+            },
+            {
+                "question": "Which symbol is used for a single-line comment in Python?",
+                "answers": ["#", "hash"],
+                "correct": "#"
+            }
+        ]
+
+    elif current_topic == "Machine Learning":
+
+        return [
+            {
+                "question": "What is the process of learning patterns from data called?",
+                "answers": ["machine learning", "ml"],
+                "correct": "Machine Learning"
+            },
+            {
+                "question": "What is used to train a machine learning model?",
+                "answers": ["data", "training data"],
+                "correct": "Data"
+            },
+            {
+                "question": "Which type of learning uses labeled data?",
+                "answers": ["supervised learning", "supervised"],
+                "correct": "Supervised Learning"
+            }
+        ]
+
+    elif current_topic == "Artificial Intelligence":
+
+        return [
+            {
+                "question": "What does AI stand for?",
+                "answers": [
+                    "artificial intelligence",
+                    "ai"
+                ],
+                "correct": "Artificial Intelligence"
+            },
+            {
+                "question": "Which field focuses on enabling computers to understand human language?",
+                "answers": [
+                    "natural language processing",
+                    "nlp"
+                ],
+                "correct": "Natural Language Processing"
+            },
+            {
+                "question": "What is a system that performs tasks requiring human-like intelligence called?",
+                "answers": [
+                    "artificial intelligence",
+                    "ai",
+                    "ai system"
+                ],
+                "correct": "Artificial Intelligence"
+            }
+        ]
+
+    else:
+
+        return [
+            {
+                "question": "What does AI stand for?",
+                "answers": [
+                    "artificial intelligence",
+                    "ai"
+                ],
+                "correct": "Artificial Intelligence"
+            },
+            {
+                "question": "Which programming language is commonly used in AI?",
+                "answers": [
+                    "python"
+                ],
+                "correct": "Python"
+            },
+            {
+                "question": "What does ML stand for?",
+                "answers": [
+                    "machine learning",
+                    "ml"
+                ],
+                "correct": "Machine Learning"
+            }
+        ]
+
+
+def run_quiz(current_topic):
 
     print("\n===================================")
     print("        AI KNOWLEDGE QUIZ")
     print("===================================")
 
-    questions = [
-        {
-            "question": "What does AI stand for?",
-            "answers": [
-                "artificial intelligence",
-                "ai"
-            ],
-            "correct": "Artificial Intelligence"
-        },
-        {
-            "question": "Which programming language is commonly used in AI?",
-            "answers": [
-                "python"
-            ],
-            "correct": "Python"
-        },
-        {
-            "question": "What does ML stand for?",
-            "answers": [
-                "machine learning",
-                "ml"
-            ],
-            "correct": "Machine Learning"
-        }
-    ]
+    if current_topic is not None:
+        print(f"Bot: Your quiz topic is {current_topic}.")
+
+    else:
+        print("Bot: This is a general AI quiz.")
+
+    questions = get_quiz_questions(current_topic)
 
     score = 0
 
@@ -256,7 +339,7 @@ def chatbot():
 
         elif intent == "quiz":
 
-            run_quiz()
+            run_quiz(current_topic)
 
         else:
 

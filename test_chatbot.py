@@ -1,4 +1,3 @@
-
 from chatbot import normalize_input, detect_intent
 
 
@@ -34,4 +33,18 @@ def test_unknown_intent():
     assert detect_intent("random question") == "unknown"
 
 
-print("All chatbot tests passed successfully!")
+def run_all_tests():
+    test_normalize_input()
+    test_greeting_intent()
+    test_ai_intent()
+    test_machine_learning_intent()
+    test_python_intent()
+    test_quiz_intent()
+    test_exit_intent()
+    test_unknown_intent()
+
+    print("All chatbot tests passed successfully!")
+
+
+if __name__ == "__main__":
+    run_all_tests()
